@@ -117,7 +117,7 @@ int main()
     {
         case 0:
              if (r1 != 0) cout<<" миллионов";
-            break;12312
+            break;
         case 1:
             cout<< n1 << " миллион";
             break;
@@ -238,20 +238,20 @@ int main()
          cout<< n90;
          break;
     }
-      if (r4 !=0)
+
       switch(r5)
     {
         case 0:
-            cout<<" тысяч";
+           if (r4 != 0) cout<<" тысяч";
             break;
         case 1:
-            cout<< n1 << " тысяча";
+            cout<< "одна" << " тысяча";
             break;
         case 2:
-            cout<< n2 << " тысячи";
+            cout<< "две" << " тысячи";
             break;
         case 3:
-            cout<< n3 << " тысячи";
+            cout<< "три" << " тысячи";
             break;
         case 4:
             cout<< n4 << " тысячи";
@@ -364,7 +364,7 @@ int main()
          cout<< n90;
          break;
     }
-     if (r7 !=0)
+
      switch(r8)
     {
         case 0:
