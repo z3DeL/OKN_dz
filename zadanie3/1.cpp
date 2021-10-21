@@ -1,4 +1,7 @@
- void  rec (int a)
+#include <iostream>
+
+using namespace std; 
+void  rec (int a)
 {
     if (a > 0)
     {
