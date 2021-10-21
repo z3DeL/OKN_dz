@@ -2,7 +2,7 @@
 {
     if (a > 0)
     {
-        print(a / 10);
+        rec(a / 10);
         cout << (a % 10) << endl;
     }
 }
