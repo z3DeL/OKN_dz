@@ -2,11 +2,12 @@
 
 using namespace std;
 void rec(int a,int del){
-        if (a % del == 0){
+       if (a != 1) {
+          if (a % del == 0 ){
             cout<< del<<endl;
             return rec(a / del, del);}
             else { return rec(a, del +1);}
-         }
+         }}
 void prime(int n){
 rec(n,2);}
 int main()
