@@ -5,14 +5,15 @@
 #include <cctype>
 using namespace std;
 void second(char str[],const int k){
-    string number="";
+    char number[50];
+    int j=0;
     int sum = 0;
      for (int i=0;i<strlen(str) ;i++){
         if (str[i] != '+'){
-            number += str[i];}
+            number[j] = str[i];j++;}
         else {int num=stoi(number);
             sum = sum + num;
-            number ="";}
+            for(int i=0;i<50;i++)number[i]=' ';}
      }
      sum +=stoi(number);
      cout<<sum;
