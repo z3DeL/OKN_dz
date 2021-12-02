@@ -4,18 +4,28 @@
 #include <windows.h>
 #include <cctype>
 using namespace std;
-void third(char str[],const int k){
-    string fam="";
+void third(char str[],const int m){
+    char fam[50];
     int flag = 0;
-    string ans="";
+    char ans[50];
+    int j=0;
+    int k=0;
      for (int i=0;i<strlen(str) ;i++){
         if (str[i] != ' ' and flag == 0){
-            fam += str[i];}
+            fam[j] = str[i];
+            j++;}
         else {if (str[i] == ' '){flag=1;}
-        else {if (flag == 1) {ans += str[i];
-        ans += '.'; flag = 2;}}}
+        else {if (flag == 1) {ans[k] = str[i];
+        k++;
+        ans[k]='.'; flag = 2;k++;}}}
      }
-     ans += fam;
+     fam[j]='\0';
+     cout<<fam<<endl;
+          for (int ij=0;ij<j;ij++){
+        ans[k]=fam[ij];
+        k++;
+     };
+     ans[k]='\0';
      cout<<ans;
 }
 
