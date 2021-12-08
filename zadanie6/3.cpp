@@ -19,7 +19,6 @@ cout << array[i][j] << " ";
 }
 
 void random_array(int **array, int n, int m) {
-
 for (int i = 0; i < n; i++) {
 
 for (int j = 0; j < m;j++) {
@@ -33,16 +32,29 @@ array[i][j] = rand()%90+10;
 }
 
 void transpose(int **array, int n, int m){
+ if (n<=m){
  for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < n - i - 1; j++)
+        for (int j = m-n; j < m - i - 1; j++)
         {
             int temp=array[i][j];
-            array[i][j]= array[n-j-1][n-i-1];
-            array[n-j-1][n-i-1]=temp;
+            array[i][j]= array[n-j-1+m-n][m-i-1];
+            array[n-j-1+m-n][m-i-1]=temp;
         }
     }
 
+}
+else  {for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < m - i - 1; j++)
+        {
+            int temp=array[i][j];
+            array[i][j]= array[m-j-1][m-i-1];
+            array[m-j-1][m-i-1]=temp;
+        }
+    }
+
+}
 }
 
 
@@ -63,10 +75,9 @@ mas[i] = new int[m];
 }
 random_array(mas,  n,  m);
 print_array(mas, n, m);
-if (n == m) {
+
 transpose(mas,n, m);
 
-print_array(mas,n,m);}
-else { cout<<"wrong dimention";}
+print_array(mas,n,m);
 
 }
