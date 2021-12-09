@@ -47,7 +47,6 @@ if ((array[i][j] < array[i_min][j_min] && array[i][j]>0) || array[i_min][j_min]<
 i_min = i; j_min = j;
 
 }}}
-cout<<i_min<<endl<<j_min<<endl;
 for (int i = 0; i < n;i++){
     int temp = array[i][j_min];
     array[i][j_min]=array[i_min][i];
