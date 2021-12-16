@@ -4,33 +4,34 @@
 
 using namespace std;
 
+void delete_array(int** array, int n) {
+	for (int i = 0; i < n; i++) {
+		delete[] array[i];
+	}
+	delete[] array;
+}
+
 void print_array(int**array, int n, int m) {
 
 for (int i = 0; i < n; i++) {
 
-for (int j = 0; j < m;j++) {
+    for (int j = 0; j < m;j++) {
 
-cout << array[i][j] << " ";
+    cout << array[i][j] << " ";
 
 }cout << endl;
 
-}
-
-}
+}}
 
 void random_array(int **array, int n, int m) {
 
 for (int i = 0; i < n; i++) {
 
-for (int j = 0; j < m;j++) {
+    for (int j = 0; j < m;j++) {
 
-array[i][j] = rand()%90+10;
+    array[i][j] = rand()%90+10;
 
-}
-
-}
-
-}
+}}}
 
 
 
@@ -41,13 +42,13 @@ int max=array[0][0];
 for (int i = 0; i < n; i++) {
     max=array[i][0];
 
-for (int j = 0; j < m;j++) {
+    for (int j = 0; j < m;j++) {
 
-if ((array[i][j] > max ) ) {
+    if ((array[i][j] > max ) ) {
 
-max=array[i][j];
+    max=array[i][j];
 
-}}mass[i]=max;}
+    }}mass[i]=max;}
 for (int i = 1; i < n;i++){
         int min_str=0;
    for (int j=0;j<m;j++){
@@ -83,5 +84,6 @@ print_array(mas, n, m);
 cout<<endl;
 perest(mas,n,m);
 print_array(mas,n,m);
+ delete_array(mas,n);
 return 0;
 }
