@@ -4,6 +4,14 @@
 
 using namespace std;
 
+void delete_array(int** array, int n) {
+	for (int i = 0; i < n; i++) {
+		delete[] array[i];
+	}
+	delete[] array;
+}
+
+
 void print_array(int**array, int n, int m) {
 
 for (int i = 0; i < n; i++) {
