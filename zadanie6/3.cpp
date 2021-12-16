@@ -4,36 +4,40 @@
 
 using namespace std;
 
+void delete_array(int** array, int n) {
+	for (int i = 0; i < n; i++) {
+		delete[] array[i];
+	}
+	delete[] array;
+}
+
+
 void print_array(int**array, int n, int m) {
 
 for (int i = 0; i < n; i++) {
 
-for (int j = 0; j < m;j++) {
+ for (int j = 0; j < m;j++) {
 
-cout << array[i][j] << " ";
+ cout << array[i][j] << " ";
 
 }cout << endl;
 
-}
-
-}
+}}
 
 void random_array(int **array, int n, int m) {
 for (int i = 0; i < n; i++) {
 
-for (int j = 0; j < m;j++) {
+ for (int j = 0; j < m;j++) {
 
-array[i][j] = rand()%90+10;
-
-}
+ array[i][j] = rand()%90+10;
 
 }
 
-}
+}}
 
 void transpose(int **array, int n, int m){
  if (n<=m){
- for (int i = 0; i < n; i++)
+  for (int i = 0; i < n; i++)
     {
         for (int j = m-n; j < m - i - 1; j++)
         {
@@ -54,8 +58,7 @@ else  {for (int i = 0; i < m; i++)
         }
     }
 
-}
-}
+}}
 
 
 int main() {
@@ -80,4 +83,5 @@ transpose(mas,n, m);
 
 print_array(mas,n,m);
 
+delete_array(mas,n);
 }
