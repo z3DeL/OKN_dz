@@ -56,7 +56,7 @@ for (int i  = i_min; i < n - 1; i++){
     for (int j = j_min; j < m - 1; j++){
         array[i][j] = array[i][j + 1];}}
 
-int** array_new = new int* [n];
+int** array_new = new int* [n-1];
 
 for (int i = 0; i < n-1; i++) {
 
@@ -97,8 +97,9 @@ random_array(mas,  n,  m);
 
 
 print_array(mas, n, m);
-
-print_array(arr_del(mas,n,m),n-1,m-1);
+int** newar=arr_del(mas,n,m),n-1,m-1);
+print_array(newar,n-1,m-1);
+delete_array(newar,n-1);
 delete_array(mas, n);
 
 return 0;
