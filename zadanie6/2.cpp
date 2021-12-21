@@ -55,7 +55,7 @@ for(int i = 0; i < n; i++){
       }}}
   
 print_array(array_ans, n, m1);
-delete_array(array, n);
+delete_array(array_ans, n);
 }
 
 
