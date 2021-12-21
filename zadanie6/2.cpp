@@ -91,9 +91,9 @@ if ( m != n1){cout<<"wrong dimention";}
 else{
 pr_matr(mas, n,m,mas1,n1,m1);}
   
-delete_array (mas1, n);
+delete_array (mas, n);
   
-delete_array (mas2, n1);
+delete_array (mas1, n1);
 return 0;
 
 }
